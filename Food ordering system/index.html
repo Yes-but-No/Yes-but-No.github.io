@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>Food ordering system</title>
+     <meta name="author" content="Mini">
+  </head>
+  <body>
+    <h1 id="_">Food ordering system</h1>
+    <img src="furries.gif">
+    <h2 id="comment">Welcome back, furry</h2>
+    <dl>
+      <dt><u>Our Menu</u></dt>
+      <dd>Apple - $2 (Out of stock)</dd>
+      <dd>Banana - $5 (Out of stock)</dd>
+      <dd>Orange - $4 (Out of stock)</dd>
+    <dl>
+    <br />
+    <input onkeydown = "if (event.keyCode == 13){check();}" placeholder="Enter food item" id="selection" type="text" />
+    <button onclick="check()">Order</button>
+    <script>
+      //Main code
+      //To be updated
+      secretItem = "";
+
+      function check(){
+        selection = document.getElementById("selection").value.toLowerCase();
+        if(selection == secretItem){
+            //To be updated
+            document.getElementById("comment").innerHTML = "Sorry, please enter a valid food item!";
+        }else if(selection == "apple" || selection == "banana" || selection == "orange"){
+            document.getElementById("comment").innerHTML = "Sorry, "+selection+"s are currently out of stock!";
+        }else{
+          document.getElementById("comment").innerText = "Sorry, we do not have "+selection+"!";
+        }
+      }
+
+      //The following code below is directly copied from stackoverflow, you are strongly adviced to ignore it
+      //To be updated
+    </script>
+  </body>
+  <style>
+    body{
+      text-align: center;
+      background-color:#66a428;
+      font-family: Arial;
+    }
+    input{
+      border-radius: 0;
+      height: 40px;
+      width: 200px;
+      background-color: white;
+      border: 1px solid black;
+    }
+    button{
+      border-radius: 0;
+      height: 40px;
+      width: 100px;
+      background-color: #04af70;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+    img{
+      width: 250px;
+      border: 1px solid black;
+    }
+    input:focus{
+      outline: none;
+    }
+  </style>
+</html>
